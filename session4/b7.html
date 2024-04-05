@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let phoneBook = [];
+
+      function addContact(name, phoneNumber, email) {
+        const contact = {
+          name: name,
+          phoneNumber: phoneNumber,
+          email: email,
+        };
+
+        phoneBook.push(contact);
+      }
+
+      function displayContact() {
+        if (phoneBook.length === 0) {
+          console.log("Danh bạ rỗng.");
+        } else {
+          console.log("Danh bạ:");
+
+          phoneBook.forEach((contact) => {
+            console.log(
+              `Tên: ${contact.name}, Số điện thoại: ${contact.phoneNumber}, Email: ${contact.email}`
+            );
+          });
+        }
+      }
+
+      addContact("Haha", "123456789", "haha@gmail.com");
+      addContact("Hoho", "987654321", "hoho@gmail.com");
+      addContact("Hihi", "456789123", "hihi@gmail.com");
+
+      displayContact();
+    </script>
+  </body>
+</html>
